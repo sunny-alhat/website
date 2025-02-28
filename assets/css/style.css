@@ -73,7 +73,7 @@ h1,h2,h3,h4,h5,h6{
     background-position: center;
     background-size: cover;
     transition: transform 0.3s ease-in-out;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
 }
 .hero-text{
     color: white;
@@ -99,5 +99,4 @@ h1,h2,h3,h4,h5,h6{
     width: 200px;
     border-top: 4px solid white;
     height: 10px;
-
 }
