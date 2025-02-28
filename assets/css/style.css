@@ -1,0 +1,103 @@
+:root{
+    --primary-font: "Mona Sans", sans-serif;
+}
+
+/* Typography */
+html, body {
+    font-family: var(--primary-font);
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 800;
+}
+
+/* Navigation bar */
+.navbar{
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px); /* Blurs background */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+.navbar-brand{
+    color:white;
+    font-size: 1.4rem;
+}
+.navbar-brand:hover{
+    color:white;
+}
+.nav-link{
+    color:white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+    .nav-link:hover{
+        color:white;
+        transform: scale(1.1);
+    }
+}
+@media screen and (max-width: 1023px) {
+    .nav-link:hover{
+        color:white;
+        font-size: 1.2rem;
+    }
+}
+
+.navbar-toggler{
+    color: white;
+    font-size: 2rem;
+    transition: 0.5s ease-in-out;
+}
+.navbar-toggler:hover{
+    rotate: 180deg;
+}
+.navbar-toggler:not(.collapsed){
+    rotate: 180deg;
+}
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+/* Theme */
+.custom-section{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+/* Home page specific */
+.hero-section{
+    background-image: url("/assets/images/space1.webp");
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+}
+.hero-text{
+    color: white;
+    text-shadow: 0px 2px 15px rgba(0,0,0,0.8)
+}
+.hero-section h1{
+    font-size: 15vh;
+}
+.hero-section h2{
+    font-size: 8vh;
+}
+.hero-section h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.hero-section .intro{
+    font-size: 2rem;
+    display: inline-block;
+}
+.hero-section .line{
+    display: inline-block;
+    margin-left: 10px;
+    width: 200px;
+    border-top: 4px solid white;
+    height: 10px;
+
+}
