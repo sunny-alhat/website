@@ -9,6 +9,9 @@ html, body {
 h1,h2,h3,h4,h5,h6{
     font-weight: 800;
 }
+h2{
+    font-size: 3rem;
+}
 
 /* Navigation bar */
 .navbar{
@@ -41,6 +44,9 @@ h1,h2,h3,h4,h5,h6{
         color:white;
         font-size: 1.2rem;
     }
+}
+.nav-link:visited{
+    color:white;
 }
 
 .navbar-toggler{
@@ -86,10 +92,10 @@ h1,h2,h3,h4,h5,h6{
     font-size: 15vh;
 }
 .hero-section h2{
-    font-size: 8vh;
+    font-size: 5vh;
 }
 .hero-section h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 .hero-section .intro{
