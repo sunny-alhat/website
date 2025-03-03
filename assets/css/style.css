@@ -1,65 +1,79 @@
 :root{
     --primary-font: "Mona Sans", sans-serif;
+    --navbar-text: #363636;
 }
 
 /* Typography */
 html, body {
     font-family: var(--primary-font);
 }
-h1,h2,h3,h4,h5,h6{
+/* h1,h2,h3,h4,h5,h6{
     font-weight: 800;
-}
-h2{
-    font-size: 3rem;
-}
+} */
 
 /* Navigation bar */
 .navbar{
-    background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(10px); /* Blurs background */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    background-color: rgba(255,255,255,0.2);
+    /* background-color: white; */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ffffff33;
 }
 .navbar-brand{
-    color:white;
+    color: var(--navbar-text);
     font-size: 1.4rem;
 }
 .navbar-brand:hover{
-    color:white;
+    color:var(--navbar-text);
 }
 .nav-link{
-    color:white;
+    color:var(--navbar-text);
     font-size: 1rem;
     font-weight: 500;
     transition: 0.2s ease-in-out;
 }
 @media screen and (min-width: 1024px) {
     .nav-link:hover{
-        color:white;
+        color:var(--navbar-text);
         transform: scale(1.1);
     }
 }
 @media screen and (max-width: 1023px) {
     .nav-link:hover{
-        color:white;
+        color:var(--navbar-text);
         font-size: 1.2rem;
     }
 }
 .nav-link:visited{
-    color:white;
+    color:var(--navbar-text);
 }
 
 .navbar-toggler{
-    color: white;
+    color: var(--navbar-text);
     font-size: 2rem;
-    transition: 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(0,0,0,0)
 }
-.navbar-toggler:hover{
-    rotate: 180deg;
+/* Rotate on hover */
+.navbar-toggler:hover {
+    transform: rotate(90deg);
 }
-.navbar-toggler:not(.collapsed){
-    rotate: 180deg;
+
+/* Stay rotated when clicked (menu open) */
+.navbar-toggler[aria-expanded="true"] {
+    transform: rotate(90deg);
 }
+
+/* Default state (ensure it starts at 0deg) */
+.navbar-toggler {
+    transform: rotate(0deg);
+}
+
+/* Rotate back when menu is closed */
+.navbar-toggler[aria-expanded="false"] {
+    transform: rotate(0deg);
+}
+
 .navbar-toggler:focus, .navbar-toggler:active {
     outline: none;
     box-shadow: none;
@@ -69,8 +83,8 @@ h2{
 
 /* Theme */
 .custom-section{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 12%;
+    padding-bottom: 12%;
 }
 
 /* Button */
@@ -78,7 +92,7 @@ h2{
 
 /* Home page specific */
 .hero-section{
-    background-image: url("/assets/images/space1.webp");
+    background-image: url("../../assets/images/1.png");
     background-position: center;
     background-size: cover;
     transition: transform 0.3s ease-in-out;
@@ -87,16 +101,6 @@ h2{
 .hero-text{
     color: white;
     text-shadow: 0px 2px 15px rgba(0,0,0,0.8)
-}
-.hero-section h1{
-    font-size: 15vh;
-}
-.hero-section h2{
-    font-size: 5vh;
-}
-.hero-section h3{
-    font-size: 1.5rem;
-    font-weight: 400;
 }
 .hero-section .intro{
     font-size: 2rem;
@@ -108,4 +112,15 @@ h2{
     width: 200px;
     border-top: 4px solid white;
     height: 10px;
+}
+
+.services .fa-brands, .services .fa-solid{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: rgb(205, 205, 205);
+}
+
+footer .fa-brands, footer .fa-solid{
+    font-size: 35px;
+    margin-right: 10px;
 }
