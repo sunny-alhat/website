@@ -1,0 +1,283 @@
+:root {
+    --primary-font: Poppins;
+    --blue1: #f7fbff;
+    --blue2: #bfdcff;
+    --blue3: #88b7f1;
+    --blue4: #0c7afb;
+    --blue5: #136bcc;
+    --grey: #d9d9d9;
+    --black: #272626;
+}
+
+/* Enable scooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--black) !important;
+}
+
+h1, h2, h3 {
+    font-weight: 700 !important;
+}
+
+body, div {
+    font-family: var(--primary-font);
+    color: var(--black);
+}
+
+.hero-section{
+    background-image: url('bg1.png');
+    background-position: center;
+    background-size: cover;
+}
+.hero-section h1{
+    font-size: 3.8rem;
+}
+.hero-section p{
+    font-size: 1.4rem;
+}
+
+
+/* Buttons */
+.custom-button {
+    background-color: var(--blue4) !important;
+    display: inline-block;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+}
+.custom-button-text{
+    display: inline-block;
+    color: white;   
+    font-size: 20px !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-weight: 500;
+}
+.custom-button-icon{
+    display: inline-block;
+    background-color: var(--blue5);
+    padding: 18px;
+    font-size: 20px;
+    color:white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.custom-button:hover {
+    transform: scale(1.1);
+    background-color: var(--blue5) !important;
+}
+
+
+/* Elementor fixes */
+.elementor-element {
+    padding: 0 !important;
+}
+
+.elementor-divider-separator {
+    border-top: 1px solid var(--grey) !important;
+}
+
+/* Page Designs */
+
+/* bank logo sections */
+.partners img {
+    border: 1px solid var(--grey) !important;
+    border-radius: 8px !important;
+}
+
+/* Why us section */
+.why-us img {
+    border-radius: 20px !important;
+    border: 5px solid var(--blue4) !important;
+    rotate: 5deg;
+    transition: transform 0.3s ease-in-out;
+    width: 80%;
+}
+
+.why-us li {
+    list-style-type: decimal;
+    margin-left: -20px !important;
+    padding: 25px 0px;
+}
+
+.why-us li:not(:last-child) {
+    border-bottom: 1px solid var(--grey);
+}
+
+/* how it works section */
+.how-it-works{
+    background-image: url('bg2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.how-it-works img {
+    border-radius: 20px !important;
+    border: 5px solid var(--blue4) !important;
+    rotate: -5deg;
+    transition: transform 0.3s ease-in-out;
+    width: 80%;
+}
+
+.how-it-works li {
+    padding: 18px 0px;
+    margin-left: -30px !important;
+}
+
+.how-it-works ol {
+    counter-reset: my-counter;
+    /* Resets the counter */
+}
+
+.how-it-works ol li {
+    list-style: none;
+    /* Removes default numbering */
+    position: relative;
+    padding-left: 60px;
+    /* Space for the custom number */
+}
+
+.how-it-works ol li::before {
+    counter-increment: my-counter;
+    content: counter(my-counter);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--black);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* testimony section */
+.testimony-card {
+    border: 1px solid rgb(237, 237, 237);
+    border-radius: 20px !important;
+    box-shadow: 0px 5px 15px rgba(166, 166, 166, 0.3);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.testimony-card img {
+    border-radius: 16px !important;
+    margin-right: 10px;
+    width: 120px;
+}
+
+.testimony-card h4 {
+    line-height: 10px;
+}
+
+.testimony-card h6 {
+    color: var(--blue4) !important;
+}
+
+.testimony-card p {
+    font-size: 18px;
+}
+
+/* custom form section */
+.custom-form {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(166, 166, 166, 0.3);
+    padding: 25px;
+}
+
+.custom-form label {
+    margin-bottom: 12px;
+}
+
+.custom-form input {
+    margin-bottom: 25px;
+    border: 1px solid var(--grey) !important;
+    border-radius: 8px !important;
+}
+
+.custom-form button {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: var(--blue4) !important;
+    color: white !important;
+    font-size: 18px !important;
+    border: 1px solid var(--blue4);
+    border-radius: 8px;
+}
+
+.custom-form button:hover {
+    background-color: var(--blue5) !important;
+    border-color: var(--blue5);
+}
+
+.custom-form button .btn-icon {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    fill: white !important;
+}
+
+/* Animations */
+.why-us img:hover {
+    transform: rotate(-5deg);
+}
+
+.how-it-works img:hover {
+    transform: rotate(5deg);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* Thank you msg styles*/
+.thank-you-msg {
+    background-color: rgb(0, 157, 0);
+    color: white;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Sticky CTA*/
+.sticky-cta {
+    position: fixed;
+    bottom: 5px;
+    right: 1px;
+    background-color: var(--blue4);
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.sticky-cta a{
+    color: white !important;
+}
+
+.sticky-cta:hover {
+    background-color: var(--blue5);
+}
+
+.last-cta{
+    background-image: url('bg3.png');
+    background-position: center;
+    background-size: cover;
+}
